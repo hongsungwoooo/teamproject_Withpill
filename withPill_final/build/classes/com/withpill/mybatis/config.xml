@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias type="com.withpill.web.admin.dto.AdminDto" alias="adminDto"/>
+		<typeAlias type="com.withpill.web.admin.dto.BoardDto" alias="boardDto"/>
+		<typeAlias type="com.withpill.web.survey.dto.SurveyDto" alias="surveyDto"/>
+		<typeAlias type="com.withpill.web.survey.dto.NutrientDto" alias="nutrientDto"/>
+		<typeAlias type="com.withpill.web.survey.dto.DeficiencyDto" alias="deficiencyDto"/>
+		<typeAlias type="com.withpill.web.survey.dto.EfficacyDto" alias="efficacyDto"/>
+		<typeAlias type="com.withpill.web.account.dto.WishlistDto" alias="wishlistDto"/>
+		<typeAlias type="com.withpill.web.account.dto.ProductDto" alias="productDto"/>
+		<typeAlias type="com.withpill.web.account.dto.AccountDto" alias="accountDto"/>
+		<typeAlias type="com.withpill.web.account.dto.WishlistProductDto" alias="wishlistProductDto"/>
+		<typeAlias type="com.withpill.web.account.dto.FindDto" alias="findDto"/>
+	</typeAliases>
+	
+	 <environments default="development">
+		 <environment id="development">
+			 <transactionManager type="JDBC"/>
+			 <dataSource type="POOLED">
+				 <property name="driver" value="oracle.jdbc.driver.OracleDriver"/>
+				 <property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"/>
+				 <property name="username" value="withpill"/>
+				 <property name="password" value="withpill"/>
+			 </dataSource>
+		 </environment>
+	 </environments>
+		
+	 <mappers>
+	 	<mapper resource="com/withpill/mybatis/xml/admin.xml"/>
+	 	<mapper resource="com/withpill/mybatis/xml/survey.xml"/>
+	 	<mapper resource="com/withpill/mybatis/xml/account.xml"/>
+	 </mappers>
+	 
+</configuration>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="Admin">
+		<select id="login" parameterType="hashmap" resultType="_int">
+			select count (*) from ADMIN where userId = #{userId} and password = #{password}
+		</select>
+	
+		<select id="getBoardList" parameterType="hashmap" resultType="boardDto">
+			SELECT *
+			FROM(	SELECT rownum R, D.*
+					FROM (	SELECT *
+							FROM BOARD ORDER BY id DESC) D) B
+							WHERE	B.R	BETWEEN #{startRow} AND #{endRow} 
+		</select>
+		
+		<select id="getBoardCnt" resultType="_int">
+			SELECT count(*) FROM BOARD
+		</select>
+		
+		<select id="getDetail" parameterType="_int" resultType="boardDto">
+			SELECT * FROM BOARD where id = #{id}
+		</select>
+		
+		<insert id="insertAdmin" parameterType="adminDto">
+			INSERT INTO ADMIN VALUES(ADMIN_SEQ.NEXTVAL, #{userId}, #{password}, #{name})
+		</insert>
+
+		<insert id="insertBoard" parameterType="boardDto">			
+			INSERT INTO BOARD VALUES (board_seq.nextval, 1, #{title}, #{content}, SYSDATE, #{category})
+		</insert>
+		
+		<select id="getSeq" resultType="_int">
+			SELECT board_seq.currval FROM dual
+		</select>
+		
+		<update id="updateBoard" parameterType="boardDto">
+			UPDATE 	board SET 
+				category 	= #{category},
+				title 		= #{title},
+				content 	= #{content}
+			WHERE id = #{id}
+		</update>
+		
+		<delete id="deleteBoard" parameterType="_int">
+			delete from board where id = #{id}
+		</delete>
+</mapper>

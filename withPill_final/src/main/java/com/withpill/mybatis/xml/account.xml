@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="Account">
+	<select id="getAccountCnt" resultType="_int">
+		SELECT count(*) FROM account
+	</select>
+	
+	<select id="getAccountId" parameterType="string" resultType="_int">
+		SELECT id FROM ACCOUNT WHERE userId = #{userId}
+	</select>
+	
+	<insert id="insertWishlistProduct" parameterType="wishlistProductDto">
+		INSERT INTO WISHLISTPRODUCT VALUES(wishlistproduct_seq.nextval, #{wishlistId}, #{productId})
+	</insert>
+	
+	<select id="getWishlistId" parameterType="_int" resultType="_int">
+		SELECT id from wishlist where accountId = #{accountId}
+	</select>
+	
+	<select id="getWishlistProductId" parameterType="_int" resultType="_int">
+		SELECT productid from WISHLISTPRODUCT where wishlistId = #{wishlistId}
+	</select>
+	
+	<delete id="deleteWishlistProduct" parameterType="wishlistProductDto">
+		DELETE FROM WISHLISTPRODUCT WHERE WISHLISTID = #{wishlistId} AND PRODUCTID = #{productId}
+	</delete>
+
+	<insert id="join" parameterType="accountDto">
+		insert into account values(
+			account_seq.nextval,			
+			#{genderId},
+			#{userId},
+			#{password},
+			#{name},
+			#{phone},
+			#{birth},			
+			#{email},
+			sysdate,
+			'Y',
+			'N',
+			'N'
+		)
+	</insert>
+	
+	<insert id="insertWishlist">
+		INSERT INTO WISHLIST VALUES(wishlist_seq.nextval, account_seq.currval)
+	</insert>
+	<select id="login" parameterType="hashmap" resultType="_int">
+		select count (*) from Account where (userId = #{userId} and password = #{password}) and note='Y'	
+	</select>
+		
+	<select id="checkId" parameterType="string"  resultType="_int">
+	 	SELECT count(*) FROM Account   WHERE userId = #{userId}
+	</select>
+	
+	<select id="checkEmail" parameterType="string"  resultType="_int">
+	 SELECT count(*)  FROM ACCOUNT  WHERE name = #{name} and genderId = #{genderId} and email= #{email} and userId = #{userId}
+	</select>
+	
+	<select id="getProductDetail" parameterType="string" resultType="map">
+		SELECT p.id, company, p.name AS korname, n.DETAIL, n.name, capacity, dosage, price, engname
+		FROM (
+			SELECT
+				p.*,
+				SUBSTR(ENGNAME, 0, INSTR(ENGNAME,'-')-1) as products,
+				SUBSTR(KORNAME, 0, INSTR(KORNAME,']')) AS company,
+				LTRIM(SUBSTR(KORNAME, INSTR(KORNAME,']')+1, LENGTH(KORNAME))) AS name
+			FROM product p
+			) p
+		LEFT OUTER JOIN NUTRIENT n ON nutrientid = n.ID 
+		WHERE products = #{product}
+	</select>
+	
+	<select id="getAccountWishlist" parameterType="map" resultType="_int">
+		SELECT wp.PRODUCTID
+		FROM ACCOUNT a
+			LEFT OUTER JOIN WISHLIST w  ON a.id = w.ACCOUNTID
+			LEFT OUTER JOIN WISHLISTPRODUCT wp ON w.id = wp.WISHLISTID
+		WHERE a.USERID = #{userId}
+			AND(
+				WP.productid = #{productId1}
+				OR WP.productID = #{productId2}
+				OR wp.productid = #{productId3}
+				OR wp.productid = #{productId4}
+			)
+	</select>
+	
+	<select id="checkHisVo4IPw" parameterType="findDto" resultType="string">
+		SELECT name FROM ACCOUNT a 
+		WHERE name=#{name} AND genderId=#{genderId} AND email=#{email} AND userId=#{userId}
+	</select>
+	
+	<update id="updatePassword" parameterType="findDto">
+		UPDATE ACCOUNT SET password = #{password} WHERE userId = #{userId}
+	</update>
+	
+	<!-- *************기쁜************* -->
+	<select id="myAccount" parameterType="string" resultType="accountDto">
+		SELECT * FROM ACCOUNT WHERE USERID = #{userId}
+	</select>
+	
+	<update id="myAccountEdit" parameterType="hashmap">
+		UPDATE ACCOUNT SET NAME = #{name}, PASSWORD = #{password}, EMAIL = #{email}, PHONE = #{phone} WHERE USERID = #{userId}
+	</update>
+	
+	<update id="unregisterOk" parameterType="string">
+		UPDATE ACCOUNT SET NOTE = 'N' WHERE USERID = #{userId}
+	</update>
+	
+	<select id="myProductList" parameterType="string" resultType="productDto">
+		SELECT	p.*
+		FROM ACCOUNT a LEFT OUTER JOIN WISHLIST w 
+			ON a.ID = w.ACCOUNTID INNER JOIN WISHLISTPRODUCT wp 
+			ON w.ID = wp.WISHLISTID INNER JOIN PRODUCT p 
+			ON wp.PRODUCTID = p.ID 
+		WHERE a.USERID = #{userId}
+	</select>
+	
+	<select id="myWishList" parameterType="string" resultType="wishlistDto">
+		SELECT	w.ID 
+		FROM ACCOUNT a LEFT OUTER JOIN WISHLIST w ON a.ID = w.ACCOUNTID
+		WHERE a.USERID = #{userId}
+	</select>
+	
+	<delete id="deleteMyWishList" parameterType="hashmap">
+		DELETE FROM WISHLISTPRODUCT w 
+		WHERE WISHLISTID = #{wishlistId}
+		AND PRODUCTID = #{productId}
+	</delete>
+	
+	<update id="updateAllNoticeOk" parameterType="accountDto">
+		UPDATE ACCOUNT SET ALLNOTICE = 'Y' WHERE USERID = #{userId}
+	</update>
+	
+	<update id="updatePromotionNoticeOk" parameterType="accountDto">
+		UPDATE ACCOUNT SET PROMOTIONNOTICE = 'Y' WHERE USERID = #{userId}
+	</update>
+	
+	<update id="updateAllNoticeNo" parameterType="accountDto">
+		UPDATE ACCOUNT SET ALLNOTICE = 'N' WHERE USERID = #{userId}
+	</update>
+	
+	<update id="updatePromotionNoticeNo" parameterType="accountDto">
+		UPDATE ACCOUNT SET PROMOTIONNOTICE = 'N' WHERE USERID = #{userId}
+	</update>
+</mapper>

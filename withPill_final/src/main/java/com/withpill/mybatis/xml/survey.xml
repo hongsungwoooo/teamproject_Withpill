@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="Survey">
+	<select id="getCount" resultType="_int">
+		SELECT COUNT(*) FROM survey
+	</select>
+
+	<select id="getSurveyCnt" resultType="_int">
+		SELECT count(*) FROM survey
+	</select>
+
+	<select id="getResult" parameterType="_int" resultType="surveyDto">
+		SELECT * FROM survey WHERE id=#{id}
+	</select>
+	
+	<select id="getNutrientEfficacy" parameterType="_int" resultType="map">
+		SELECT 	s.nutrient
+			, 	LISTAGG(s.efficacy, ',') WITHIN GROUP (ORDER BY s.efficacy) efficacy
+		FROM (
+			SELECT	DISTINCT(e.name) efficacy
+				, 	n.name nutrient
+			FROM SURVEY s
+			   LEFT OUTER JOIN DEFICIENCY d				ON s.DEFICIENCYID1  = d.ID
+			                             				OR s.DEFICIENCYID2	= d.ID 
+			                                 			OR s.DEFICIENCYID3 	= d.ID 
+			   LEFT OUTER JOIN DEFICIENCYNUTRIENT dn   	ON d.id          	= dn.DEFICIENCYID
+			   LEFT OUTER JOIN NUTRIENT n             	ON dn.NUTRIENTID    = n.ID
+			   LEFT OUTER JOIN NUTRIENTEFFICACY ne      ON n.id           	= ne.NUTRIENTID
+			   LEFT OUTER JOIN EFFICACY e             	ON ne.EFFICACYID    = e.ID
+			WHERE s.id=#{id} AND n.NAME != '선택 안함') s
+		GROUP BY s.nutrient
+	</select>
+	
+	<select id="getProductPath" parameterType="string" resultType="string">
+		SELECT DISTINCT(SUBSTR(ENGNAME, 0, INSTR(ENGNAME,'-')-1)) as product FROM nutrient n
+			LEFT OUTER JOIN PRODUCT p ON n.ID = p.NUTRIENTID
+		WHERE n.name=#{nutrientName}
+	</select>
+	
+	<select id="getCurrentSeq" resultType="_int">
+		select survey_seq.currval from dual
+	</select>
+	
+	<insert id="insertSurvey" parameterType="map">
+		INSERT INTO SURVEY VALUES (
+			survey_seq.nextval,
+			#{surveyQ4-1, jdbcType=INTEGER},
+			#{surveyQ4-2, jdbcType=INTEGER},
+			#{surveyQ4-3, jdbcType=INTEGER},
+			#{surveyQ2},
+			#{surveyQ1},
+			#{surveyQ3},
+			#{surveyQ5},
+			#{surveyQ6},
+			#{surveyQ7},
+			#{surveyQ8},
+			#{surveyQ9},
+			#{surveyQ10},
+			#{surveyQ11},
+			#{surveyQ13}
+		)
+	</insert>
+	
+	
+</mapper>

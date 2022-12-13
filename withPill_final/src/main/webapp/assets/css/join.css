@@ -1,0 +1,406 @@
+@charset "UTF-8"; 
+
+/* 
+------------------------------
+          join-page
+------------------------------
+*/
+
+.join-form-wrap{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+  }
+  
+  .join-logo img{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  
+  .join-form #join-form h4 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 50px;
+    color: #22b3c1;
+    font-style: normal;
+    color: #22b3c1;
+  }
+  
+  .join-form  {
+    max-width: 700px;
+    margin: 100px auto;
+  }
+  
+  
+  
+  .join-form #join-form {
+    padding: 20px 80px 0 80px;
+  
+  
+  }
+  
+  .join-form #join-form label {   
+    font-size: 15px;
+    color: #afafaf;
+    margin-bottom: 10px;
+  }
+
+  .join-form #check-id, .join-form #check-pw{
+    text-align: right;
+  }
+  
+  .join-form #join-form input,
+  .join-form #join-form select {
+    font-size: 14px;
+      text-align: left;
+      color: #afafaf;
+      border: 1px solid #dddfe2;
+      padding: 12px 10px;
+      width: 100%;
+      display: inline-block;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0.5px;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: 5px;
+  }
+  
+  .join-form #join-form input:focus {
+    outline: none !important;
+    border-radius: 5px;
+    border-color: #22b3c1;
+    box-shadow: 0 0 0 2px #63c0c8;
+    caret-color: #22b3c1;
+  }
+  
+  .join-form #join-form #finish-button{
+    font-size: 14px;
+    color: #fff;
+    background-color: #22b3c1;
+    border: 1px solid #22b3c1;
+    padding: 12px 30px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  
+  .join-form #join-form #check-id{
+    font-size: 14px;
+      text-align: left;
+      color: #3e3939;
+      border: 1px solid #dddfe2;
+      padding: 12px 10px;
+      width: 100%;
+      display: inline-block;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0.5px;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 20px;
+      border-radius: 5px;
+    
+  }
+
+
+
+
+
+
+
+  
+  .join-form #join-formnav {
+    font-size: 14px;
+    padding: 12px 30px;
+    color: #afafaf;
+    text-align: center;
+  }
+  
+  
+  .join-form #join-form button {
+    font-size: 14px;
+    color: #fff;
+    background-color: #22b3c1;
+    border: 1px solid #22b3c1;
+    padding: 12px 30px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+    /* margin: 10px; */
+  }
+  
+  .join-form #join-form button:hover {
+    opacity: 0.8;
+  }
+  
+  .join-form #join-form hr {
+    margin-top:50px;
+    margin-bottom:50px;
+    
+  }
+  
+  
+  
+  @media (max-width: 992px) {
+  
+    .join-form #join-form {
+      padding: 45px 30px;
+    }
+  
+  }
+
+
+  
+/* 
+------------------------------
+          terms-page
+------------------------------
+*/
+
+.terms-form  {
+    padding: 100px 0;
+    max-width: 700px !important;
+    background-color: #fff;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .terms-form h4 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 50px;
+    color: #22b3c1;
+    font-style: normal;
+    color: #22b3c1;
+  }
+  
+  .terms-form #row {
+    padding: 100px 300px 300px 300px;
+    background-color: #f9f9f9;
+    
+  }
+  
+  .terms-form  button {
+    font-size: 14px;
+    color: #fff;
+    background-color: #22b3c1;
+    border: 1px solid #22b3c1;
+    padding: 12px 30px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 250px;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .terms-form #panel-heading{
+    font-size: 14px;
+    padding-bottom: 20px;
+    color: #22b3c1;
+  }
+
+  .terms-form .logo{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+
+  .terms-font, .control-label{
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  
+  .form-group{
+    margin-bottom: 50px;
+  }
+
+  .agree{
+    color: #22b3c1;
+    font-weight: 700;
+  }
+
+  @media (max-width: 750px) {
+  
+    .terms-form{
+      padding: 100px 30px;
+      width: 100%;
+    }
+  
+  }
+
+
+
+/* 
+------------------------------
+          findpw-page
+------------------------------
+*/
+
+.findpw-form-wrap{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .findpw-logo img{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 30px 0;
+  }
+  
+  .findpw-form #findpw-form h4 {
+    font-size: 30px;
+    text-align: left;
+    margin-bottom: 50px;
+    color: #22b3c1;
+    font-style: normal;
+    color: #22b3c1;
+  }
+  
+  .findpw-form  {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  
+  
+  .findpw-form #findpw-form {
+    padding: 20px 80px 0 80px;
+  
+  
+  }
+  
+  .findpw-form #findpw-form label {
+   
+    font-size: 15px;
+    color: #afafaf;
+  }
+  
+  .findpw-form #findpw-form input,
+  .findpw-form #findpw-form select {
+    font-size: 14px;
+      text-align: left;
+      color: #afafaf;
+      border: 1px solid #dddfe2;
+      padding: 12px 30px;
+      width: 100%;
+      display: inline-block;
+      font-weight: 500;
+      text-transform: none;
+      letter-spacing: 0.5px;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: 10px;
+  }
+  
+  .findpw-form #findpw-form input:focus {
+    outline: none !important;
+    border-radius: 5px;
+    border-color: #22b3c1;
+    box-shadow: 0 0 0 2px #63c0c8;
+    caret-color: #22b3c1;
+  }
+  
+  
+  .findpw-form #findpw-formnav {
+    font-size: 14px;
+    padding: 12px 30px;
+    color: #afafaf;
+    text-align: center;
+  }
+  
+  
+  .findpw-form #findpw-form button {
+    font-size: 14px;
+    color: #fff;
+    background-color: #22b3c1;
+    border: 1px solid #22b3c1;
+    padding: 12px 30px;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+    border-radius: 25px;
+    font-weight: 500;
+    text-transform: capitalize;
+    letter-spacing: 0.5px;
+    transition: all .3s;
+    position: relative;
+    overflow: hidden;
+   
+    margin-top: 10px;
+  }
+  
+  .findpw-form #findpw-form button:hover {
+    opacity: 0.8;
+  }
+  
+  .findpw-form #findpw-form hr {
+    margin-top:50px;
+    margin-bottom:50px;
+    
+  }
+  
+  .findpw-form #findpw-form img{
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 100px 0;
+  }
+  
+  .findpw-form #findpw-form h3{
+    color: #2a2a2a;
+    font-size: 30px;
+    text-align: left;
+    padding-bottom: 40px;
+  }
+  .findpw-form #findpw-form h2{
+    font-size: 16px;
+    padding-bottom: 15px;
+    text-align: left;
+    line-height: 30px;
+    color: #afafaf;
+  
+  }
+  
+  
+  @media (max-width: 992px) {
+  
+    .findpw-form #findpw-form {
+      padding: 45px 30px;
+    }
+  
+  }
+
+
+

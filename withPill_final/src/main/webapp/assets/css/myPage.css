@@ -1,0 +1,491 @@
+@charset "UTF-8"; 
+
+.myPage-wrap{
+    margin: 95px auto 0;
+    max-width: 1000px;
+    padding-bottom: 10px;
+}
+
+.myPage-wrap::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.myPage-left-header{    
+    float: left;
+    display: table-cell;
+    width: 300px;
+    height: 100%;
+    /* height: 800px; */
+    background-color: #fff;
+    box-shadow: 5px 1px 8px 0 rgb(0 0 0 / 6%);
+    border-left: 1px solid rgba(0,0,0,.08);
+    border-bottom: 1px solid rgba(0,0,0,.08);
+    vertical-align: top;
+    z-index: 1;
+}
+
+.profile-area {
+    padding: 2px 20px 8px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.profile-inner{
+    padding: 70px 0;
+}
+
+.profile{
+    position: relative;
+}
+
+.profile img{
+	display: block;
+	width: 84px;
+	height: 84px;
+	border-radius: 50%;
+	margin: 0 auto;
+}
+
+.myprofile-img img{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: block;
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+}
+
+.profile-inner .image{
+    position: relative;
+    width: 84px;
+    height: 84px;
+    fill: #22b3c1;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+    
+}
+
+.profile-edit{
+    position: absolute;
+    left: 55%;
+    bottom: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-color: rgba(34, 179, 193, .5);
+    box-shadow: 2px 6px 8px 0 rgb(30 30 35 / 8%);
+    box-sizing: border-box;
+    font-size: 0;
+}
+
+.profile-inner .edit{
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    fill: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.userid{
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: -.67px;
+    word-break: break-all;
+    padding: 10px 0 0;
+    color: #292929;
+}
+
+.useremail{
+    color: #9f9f9f;
+}
+
+.left a{
+    display: block;
+    transition: all 0.2s;
+}
+
+.left a:hover{
+    color: #22b3c1;
+}
+
+.left-menu{
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.left-menu li:last-child{
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(0,0,0,.1);    
+}
+
+.left-menu a{
+    display: block;
+    font-size: 19px;
+    line-height: 26px;
+    font-weight: 400;
+    letter-spacing: -1.18px;
+    padding: 10px 0;
+    color: #282828;
+}
+
+.left-link{
+    padding: 0 20px 0;
+    box-sizing: border-box;
+    color: #9f9f9f;    
+}
+
+.left-link li{
+    padding: 10px 0;
+}
+
+.left-link li:first-child{
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+
+.left-link a{
+    color: #9f9f9f;
+}
+
+
+on::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #1e1e23;
+    border-radius: 1px;
+}
+
+.myPage-right-container{
+    float: left;
+    padding: 5% 5%;
+    width: 700px;
+}
+
+.right-cnt{
+    margin-bottom: 5%;
+}
+
+.myprofile, .notice, .myLike, .link{
+    padding: 16px 17px;
+    border-radius: 12px;
+    box-shadow: 1px 1px 10px 0 rgb(72 75 108 / 8%);
+    border: solid 1px #e3e9ed;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.myprofile{
+    border: 1px solid #22b3c1;
+    position: relative;
+}
+
+
+.title-text{
+    display: inline-block;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: -.4px;
+    color: #96a1aa;
+    margin-bottom: 17px;
+}
+
+.myinfo-area {
+    display: flex;
+    justify-content: space-between;
+}
+
+.myinfo-area li{
+    display: inline-block;
+}
+
+.myinfo-area li:last-child{
+   width: 75%;
+}
+
+.myinfo-area li:last-child div{
+    width: 100%;
+}
+
+.myinfo-area li:first-child{
+    width: 20%;
+    text-align: left;
+}
+
+.myprofile-img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.myprofile-img svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;    
+    fill: #22b3c1;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 50%;
+}
+
+.myaccount{
+    width: 480px;
+}
+
+.myaccount p{
+	width: 100%;
+}
+
+.myaccount input{
+	outline: none;
+	border: none;
+	width: 80%;
+	padding: 0 10px;
+}
+
+.myaccount input:focus{
+    outline: none !important;
+/*     border-radius: 5px; */
+/*     border-color: #22b3c1; */
+	border: none;
+    background-color: rgba(34, 179, 193, .5);
+/*     box-shadow: 0 0 0 2px #63c0c8; */
+    caret-color: #fff;
+}
+
+.myaccount div{
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.myaccount div:last-child{
+    padding-bottom: 20px;
+    border-bottom: none;
+}
+
+.myname{
+    position: relative;
+    padding-right: 70px;
+    width: 100%;
+}
+
+.edit-account{
+    position: absolute;
+    top: 16px;
+    right: 17px;
+}
+
+.edit-account button, .myLikeList button{
+    float: right;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.edit-account button span,  .myLikeList button span{
+    color: #96a1aa;
+}
+
+.btnEditOk{
+	display: none;
+}
+
+.myname p, .myaddress p, .myphone p{
+    display: inline-block;
+    height: 34px;
+    line-height: 34px;
+    box-sizing: border-box;
+    color: #282828;
+}
+
+.myLikeList{
+    width: 100%;
+    padding: 5px 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+    box-sizing: border-box;
+}
+
+.myLike .myLikeList:first-child{
+    border-top: 1px solid rgba(0,0,0,0);
+}
+
+.myLikeList p{
+    display: inline-block;
+    width: 70%;
+    color: #282828;
+    font-size: 12px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.myLikeList button{
+    position: relative;
+    width: 34px;
+    height: 34px;
+    margin: auto 0;
+}
+
+.myLikeList button svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.notice li{
+    padding: 10px 0;
+}
+
+.notice li{
+    border-bottom: 1px solid rgba(0,0,0,.1);  
+}
+
+.notice li:last-child{
+    border-bottom: none;
+}
+
+.notice a{
+    float: right;
+}
+
+.allNoticeAgree, .onlyPromotionNoticeAgree{
+	display: inline-block;
+}
+
+.allNoticeAgree i, .onlyPromotionNoticeAgree i{
+	font-size: 30px;
+	height: 24px;
+	line-height: 24px;
+}
+
+
+.unregister button{
+    border: none;
+    float: left;
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px;
+}
+
+.unregister button span{
+    color: #fff;
+}
+
+.warning{
+    float: left;
+    color: red;
+    font-size: 12px;
+    line-height: 44px;
+    padding: 0 0 0 10px ;
+    height: 44px;
+}
+
+.link{ 
+    display: none;
+}
+
+.mypw{
+	position: relative;
+}
+
+.myaccount p>label{
+	display: inline-block;
+	color: #afafaf;
+}
+
+.mypw .icon{
+	cursor:pointer;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	transform: translateY(-50%);
+	
+}
+
+.mypw .icon i{
+	font-size: 20px;
+}
+
+.mypw .icon i:hover{
+	color: #22b3c1;
+	
+}
+
+@media (max-width: 575px) {
+
+}
+  
+  
+@media (max-width: 767px) {
+
+}
+
+@media (max-width: 992px) {
+
+}
+
+@media (max-width: 1100px) {
+    .myPage-wrap {
+        margin: 95px auto 0;
+        /* padding: 0 30px; */
+        width: 100%;
+    }
+
+    .profile-area{
+        display: none;
+    }
+
+    .myPage-left-header{
+        display: none;
+    }
+
+    .myPage-right-container {
+        clear: both;
+        width: 100%;
+        padding: 10% 5% 5%;
+    }
+
+    .link{
+        display: flex;
+        justify-content: space-between;
+        background-color: #f9fbfc;
+    }
+
+    .link li{
+        display: inline-block;
+        width: 50%;
+    }
+    .link li:first-child{
+        border-right: 1px solid #d9d9d9;
+    }
+    .link li a{
+        display: block;
+        text-align: center;
+        color: #9f9f9f;
+    }
+}
+
+@media (max-width: 1400px) {
+    
+}

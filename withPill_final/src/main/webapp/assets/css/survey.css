@@ -1,0 +1,583 @@
+@charset "UTF-8"; 
+
+/* ***** 디폴트 세팅 ***** */
+body {
+    font-family: Pretendard,-apple-system,BlinkMacSystemFont,system-ui,Roboto,"Helvetica Neue","Segoe UI","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;
+    font-size: 14px;
+    word-break: keep-all;
+    line-height: 1.2;
+    color: #282828;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+a, abbr, address, article, aside, audio, b, big, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-family: Noto Sans KR,sans-serif;
+    vertical-align: baseline;
+}
+
+a{
+    text-decoration: none;
+
+}
+
+/* ***** 설문조사 인트로 시작 ***** */
+#survey{
+    height: 100%;
+    min-height: 100%;
+    background-color: #fafafa;
+}
+
+.only-sr{
+    overflow: hidden !important;
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 1px;
+    height: 1px;
+}
+
+.survey-wrap{
+    position: relative;
+    background-color: #fafafa;
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.survey-contents{
+    padding: 40px 0 142px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+.survey-contents-inner{
+    position: relative;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    width: 940px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 3px 0 rgb(0 0 0 / 8%);
+    box-shadow: 0px 2px 3px 0 rgb(0 0 0 / 8%);
+}
+
+.close-survey{
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 3px 0 rgb(0 0 0 / 8%);
+    box-shadow: 0px 2px 3px 0 rgb(0 0 0 / 8%);
+    z-index: 9;
+}
+
+.survey-start{
+    text-align: left;
+}
+
+
+.start-header{
+    position: relative;
+    margin: auto;
+    width: 418px;
+    height: 286px;
+}
+
+.logo{
+    margin-top: 32px;
+    /* width: 50px; */
+}
+
+.logo img{
+    padding-top: 32px;
+    display: block;
+    width: 100px;
+    height: auto;
+}
+
+
+#survey .survey-contents-inner .survey-start .start-header .icon{
+    margin-top: 60px;
+    background-color: #000;
+}
+
+#survey .survey-contents-inner .survey-start .start-header h2{
+    position: relative;
+    margin-top: 32px;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 700;
+}
+
+.light{
+    font-weight: 300 !important;
+}
+
+#survey .survey-contents-inner .survey-start .start-intro{
+    position: relative;
+    margin: auto;
+    width: 418px;
+}
+
+#survey .survey-contents-inner .survey-start .start-intro>p{
+    line-height: 24px;
+    font-size: 16px;
+    color: #333;
+}
+
+#survey .survey-contents-inner .survey-start .start-intro>p span{
+    font-size: 12px;
+    color: #848484;
+}
+
+.close-survey{
+    position: absolute;
+    right: -25px;
+    top: -25px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 2px 3px 0 rgb(0 0 0 / 8%);
+    box-shadow: 0px 2px 3px 0 rgb(0 0 0 / 8%);
+    z-index: 9;
+}
+
+.close-survey svg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    fill: #282828;
+}
+
+#survey .survey-contents-inner .survey-start .start-intro .btn-wrap{
+    margin-top: 120px;
+}
+
+#survey .survey-contents-inner .survey-start .start-intro .btn-wrap .btn{
+    /* display: block; */
+    width: 418px;
+    background-color: #282828;
+    color: #fff;
+}
+
+.btn.btn-dark, .btn.btn-colored{
+    line-height: 50px;
+}
+
+.btn-dark{
+    background-color: #333;
+    border: none;
+    color: #fff;
+}
+
+.btn-radius {
+    border-radius: 25px;
+}
+
+.btn{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    padding: 0 36px;
+    min-width: 74px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    outline: none;
+    border: 1px solid #d7d7d7;
+    background-color: #fff;
+    color: #333;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#survey .survey-contents-inner .survey-start .start-intro p.warning{
+    margin-top: 28px;
+    font-size: 12px;
+    color: #848484;
+}
+
+#footer.absolute-bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+#footer.fafafa{
+    background-color: #fafafa;
+}
+
+#footer.mini{
+    padding-top: 50px;
+    padding-bottom: 53px;
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    color: #848484;
+    font-size: 12px;
+}
+
+/* ***** 설문조사 인트로 끝 ***** */
+
+/* ***** 질문 시작 ***** */
+#survey .survey-contents-inner .survey-test .survey-test-header {
+    height: 91px;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#survey .survey-contents-inner .survey-test .step-list-wrap {
+    display: table;
+    margin: 0 auto;
+    width: 670px;
+    table-layout: fixed;
+}
+
+#survey .survey-contents-inner .survey-test .step-list-wrap li.on {
+    font-weight: 700;
+    color: #22b3c1;
+}
+
+#survey .survey-contents-inner .survey-test .step-list-wrap li {
+    position: relative;
+    display: table-cell;
+    height: 90px;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    color: #bdbdbd;
+    vertical-align: middle;
+}
+
+#survey .survey-contents-inner .survey-test .survey-progress {
+    height: 4px;
+    background-color: #eee;
+}
+
+#survey .survey-contents-inner .survey-test .survey-progress #survey-progress-rate {
+    height: 4px;
+    width: 0;
+    background-color: #22b3c1;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-contents {
+    padding-top: 36px;
+    margin: 0 auto;
+    width: 670px;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-contents .question-section em {
+    font-size: 16px;
+    font-weight: 700;
+    color: #999;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-contents .question-section h2 {
+    position: relative;
+    padding: 10px 0 10px;
+    line-height: 1.2;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-contents .question-section h2>span {
+    position: absolute;
+    top: -20px;
+    right: 0;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-contents .question-section>p {
+    font-size: 16px;
+    color: #999;
+    padding-bottom: 15px;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-contents .question-section>ul {
+    border-top: 1px solid #eee;
+}
+
+.question-answer-wrap {
+    padding: 28px 0;
+}
+
+.question-answer-wrap li:first-child {
+    margin-top: 0;
+}
+
+.question-answer-wrap li {
+    display: block;
+    margin-top: 28px;
+}
+
+.question-answer-wrap .question-input-field {
+    position: relative;
+}
+
+.question-input-val{
+	color: red;
+	font-weight: bold
+}
+input[type="radio" i] {
+    background-color: initial;
+    cursor: default;
+    appearance: auto;
+    box-sizing: border-box;
+    margin: 3px 3px 0px 5px;
+    padding: initial;
+    border: initial;
+}
+
+input[type=text], input[type=password], input[type=number], input[type=email], input[type=tel], textarea, select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-family: inherit;
+    width: 100%;
+    border: 1px solid #dddfe2;
+    border-radius: 5px;
+    height: 48px;
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+
+#survey .survey-contents-inner .survey-test .survey-errormsg {
+    color: #22b3c1;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 auto;
+    width: 670px;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-footer {
+    overflow: hidden;
+    margin: 20px auto 0;
+    width: 670px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-footer a{
+    width: 47%;
+    height: 50px;
+    display: inline-block;
+}
+
+#survey .survey-contents-inner .survey-test .survey-question-footer .btn{
+    width: 100%;
+}
+
+
+.btn-dark {
+    background-color: #333;
+    border: none;
+    color: #fff;
+}
+
+button{
+    cursor: pointer;
+}
+
+.survey-test .survey-final{
+    font-size: calc(1rem + .5vw);
+    text-align: center;
+    line-height: 91px;
+}
+
+
+
+
+
+
+/* ***** 질문 끝 ***** */
+
+
+/* ***** 반응형 시작 ***** */
+
+@media only screen and (max-width: 1023px){
+    /* ***** 메인 ***** */
+    .survey-wrap{
+        display: block;
+        background-color: #fff;
+    }
+
+    .survey-wrap .survey-contents{
+        padding: 0;
+        display: block;
+    }
+
+    .survey-wrap .survey-contents .survey-contents-inner{
+        width: 100%;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .survey-contents-inner .survey-start{
+        padding: 0 26px;
+    }
+    
+    .survey-contents-inner .survey-start .start-header{
+        width: 100%;
+    }
+
+    .start-intro{
+        width: 100% !important;
+    }    
+
+    .survey-contents-inner .survey-start .start-intro .btn-wrap,
+    .survey-contents-inner .survey-start .start-intro .btn-wrap2{
+        width: 100% !important;
+    }
+    
+    .btn btn-radius btn-dark{
+        display: block;
+        width: 100% !important; 
+    }
+
+    #survey .survey-contents-inner .survey-start .start-intro .btn-wrap .btn, #survey .survey-contents-inner .survey-start .start-intro .btn-wrap2 .btn{
+        width: 100% !important; 
+    }
+
+    .survey-contents-inner .survey-start .start-intro .btn-wrap .btn,
+    .survey-contents-inner .survey-start .start-intro .btn-wrap2 .btn{
+        width: 100%;
+    }
+
+    .survey-wrap .survey-contents .survey-contents-inner .close-survey{
+        right: 21px;
+        top: 25px;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        width: 20px;
+        height: 20px;
+        line-height: 16px;
+    }
+
+    #footer{
+        background-color: #fff;
+    }
+
+    #footer.fafafa{
+        background-color: #fff;
+    }
+
+    .mini{
+        margin-top: 0;
+        padding: 16px 0 26px 0;
+    }
+
+    /* ***** 설문 ***** */
+    #survey .survey-contents-inner .survey-test .survey-test-header {
+        height: 71px;
+    }
+
+    
+    
+    #survey .survey-contents-inner .survey-test .step-list-wrap {
+        padding: 0 25px;
+        width: 100%;
+        height: 70px;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    #survey .survey-contents-inner .survey-test .step-list-wrap li {
+        font-size: 13px;
+        height: 70px;
+        text-align: left;
+    }
+
+    #survey .survey-contents-inner .survey-test .survey-question-contents{
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    
+    #survey .survey-contents-inner .survey-test .survey-question-contents .question-section em {
+        font-size: 13px;
+    }
+    
+    #survey .survey-contents-inner .survey-test .survey-question-contents .question-section h2 {
+        line-height: 1.1;
+        font-size: 18px;
+    }
+
+    #survey .survey-contents-inner .survey-test .survey-question-contents .question-section h2>span {
+        position: absolute;
+        top: -20px;
+        right: 0;
+    }
+
+    #survey .survey-contents-inner .survey-test .survey-question-contents .question-section>p {
+        font-size: 12px;
+    }
+
+    .question-answer-wrap li {
+        margin-top: 20px;
+    }
+
+    #survey .survey-contents-inner .survey-test .survey-errormsg {
+        padding-left: 25px;
+        padding-right: 25px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    #survey .survey-contents-inner .survey-test .survey-question-footer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-justify-content: space-between;
+        margin-top: 22px;
+        padding: 0 25px;
+        width: 100%;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+    
+
+    #survey .survey-contents-inner .survey-test .survey-question-footer .btn:first-child {
+        padding: 0;
+        width: 82px;
+    }
+
+    #survey .survey-contents-inner .survey-test .survey-question-footer .btn:last-child {
+        width: 100%;
+    }
+    
+    #survey .only-pc{
+    	display: none;
+    }
+
+  }

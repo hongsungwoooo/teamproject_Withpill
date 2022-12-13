@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+#mineform fieldset{
+   display: inline-block;
+   direction: rtl;
+   border: 0;
+}
+
+#mineform input[type=checkbox]{
+   display: none;
+}
+
+#mineform label{
+   font-size: 2em !important;
+   color: transparent;
+   text-shadow: 0 0 0 #f0f0f0;
+   height: 50px;
+   line-height: 50px;
+}
+
+#mineform label:hover{
+   text-shadow: 0 0 0 rgb(255, 0, 0);
+	cursor: pointer;
+}
+
+#mineform input[type=checkbox]:checked ~ label{
+   text-shadow : 0 0 0 rgb(255, 128, 128);
+}

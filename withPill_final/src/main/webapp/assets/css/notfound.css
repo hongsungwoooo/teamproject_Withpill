@@ -1,0 +1,60 @@
+@charset "UTF-8"; 
+body {
+    font-family: Noto Sans KR,sans-serif;
+    vertical-align: baseline;
+    font-size: 14px;
+    word-break: keep-all;
+    line-height: 1.2;
+    color: #282828;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+a, abbr, address, article, aside, audio, b, big, blockquote, body, canvas, caption, cite, code, dd, del, details, dfn, dialog, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hr, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, meter, nav, object, ol, output, p, pre, progress, q, rp, rt, ruby, s, samp, section, small, span, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.not-found-wrap{
+    width: 512px;
+    margin: 95px auto 0;
+    padding: 0 0 100px;
+}
+
+.not-found-txt{
+    text-align: center;
+    tab-size: 12px;
+}
+
+.go-home{
+    width: 100%;
+}
+
+.go-home button{
+	width: 100%;
+    margin-top: 70px;
+    padding: 20px 30px;
+    background-color: #282828;
+    color: white;
+    box-shadow: 0 0 10px rgb(0 0 0 / 7%);
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+}
+
+footer {
+  background-color: #22b3c1;
+  text-align: center;
+  padding: 25px 0px;
+}

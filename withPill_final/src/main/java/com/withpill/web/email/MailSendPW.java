@@ -49,7 +49,7 @@ public class MailSendPW {
 				msg.setSentDate(new Date());
 
 				// 발송자를 지정한다. 발송자의 메일, 발송자명
-				msg.setFrom(new InternetAddress("hassing123534@gmail.com", "WITHPILL"));
+				msg.setFrom(new InternetAddress("", "WITHPILL"));
 
 				// 수신자의 메일을 생성한다.
 				InternetAddress to = new InternetAddress(fdto.getEmail());
